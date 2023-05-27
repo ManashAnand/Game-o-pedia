@@ -1,0 +1,78 @@
+
+* {
+    box-sizing: border-box;
+    /* font-family: "Open Sans", sans-serif; */
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Press Start 2P', cursive;
+    background-image: url(./assets/samurai_village.jpg);
+}
+
+
+#game-screen {
+    position: relative; 
+    display: inline-block;
+}
+
+#game-bar {
+    position: absolute; 
+    display: flex; 
+    width: 100%;
+    height: 90px;
+    align-items: center ;
+    justify-content: space-around;
+
+}
+
+/* health bar https://codepen.io/dwidomski/pen/DegdPX */
+.health-bar {
+    /* -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; */
+    box-sizing: border-box;
+    width: 40%;
+    height: 20px;
+    padding: 5px;
+    background: #ddd;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .bar {
+    background: #c54;
+    width: 100%;
+    height: 10px;
+    position: relative;
+    
+    transition: width .5s linear;
+  }
+  
+  .hit {
+    background: rgba(25,25,25,0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0px;
+    
+    transition: width .5s linear;
+  }
+/* end ^ health bar https://codepen.io/dwidomski/pen/DegdPX */
+/* dimonnd shape https://codepen.io/nickelse/pen/YWOxQG   */
+.diamond-shape {
+    background: red;
+    height: 60px;
+    text-align: center;
+    
+    transform:rotate(45deg);
+      width:60px;
+  }
+  .item-count {
+    color: #333;
+    display: table-cell;
+    height: 60px;
+    transform: rotate(-45deg);
+    vertical-align: middle;
+      width:60px;
+  }
+/* end ^ diamond shape */

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">           
+	<meta charset="UTF-8" />
+	<title>Arcade style Beat-em-up</title>
+    
+</head>
+<body style="position: absolute ; display: flex; background-color: bisque; flex-direction: column; background-image: url(./assets/samurai_village2.jpg); background-repeat: no-repeat; background-size: cover;">
+  
+
+        
+    
+    <!-- Entire Game Screen -->
+    <div id="game-screen" style="display: block ; ">
+        <!-- Entire Game Bar Section-->
+        <div id= "game-bar" style="  display: flex; justify-content: center; align-items: center; font-size: 3rem; ">
+            <!-- Game Bar Components -->
+            
+                <!-- Left Side health-->
+                <div class="health-bar" data-total="1000" data-value="1000">
+                    <div id ="player1-bar" class="bar">
+                          <div id ="player1-hit" class="hit"></div>
+                    </div>
+                </div>
+
+                <!-- Middle timer dimound -->
+                <div class="container diamond-shape">
+                    <div id="timer" class="item-count">30</div>
+                </div>
+
+                <!-- right side health -->
+                <div  class="health-bar" data-total="1000" data-value="1000">
+                    <div id="player2-bar" class="bar">
+                          <div id="player2-hit" class="hit"></div>
+                    </div>
+                </div> 
+            
+        </div>
+        <!-- PLayer Randomized Names -->
+        <div style="position: absolute;display: grid;height: 50px;grid-template-columns: 50% 50%;width: 100%;">
+            
+            <h2 id="player1-name" style="color: rgb(227, 24, 24); text-align: left; margin: 0; padding-left: 50px;;"> Player 1 : <span id="player1-points">1000</span></h2>
+            <h2 id="player2-name" style="color: rgb(227, 24, 24); text-align: right; margin: 0; padding-right: 50px;"> Player 2 : <span id="player2-points">1000</span></h2> 
+            
+        </div>
+        <!-- Match Info-->
+        <div id="match-info" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; align-items: center;justify-content: center; 
+        display: flex; color:   aquamarine;  "></div>  <!-- display: none; to hide display: flex; to show-->
+
+        
+        <canvas style="display: block;  width: 98vw; "></canvas>
+
+
+        <div  style="display: block; ">
+            <!-- <h1 style="text-align: center;">FLYING SAMURAI</h1> -->
+            <!-- <div style="display: flex; justify-content: space-evenly; align-items: center;">
+                <img src="icon.png"><img src="icon2.png"></div>
+           
+                <div> -->
+                    <div style="width: 100%; text-align: center; color: whitesmoke; font-size: 35px;">
+                        <div>CONTROLS</div> 
+                    </div>
+
+                    <div style="display: flex; justify-content: space-evenly; ">
+                        <div style="font-size: 25px; color: whitesmoke;">
+                            Player 1<br> A/D: Left/Right <br> w: jump <br> Space: Attack
+                        </div>
+                        <div style="font-size: 25px; color: whitesmoke;">
+                            Player 2<br> Arrow Keys:Left/Right <br>  Arrow Up: jump <br> Arrow Down:     Attack
+                        </div>
+                    </div>
+
+                </div>
+             </p>
+    </div>
+
+
+    </div>
+</body>
+
+<script src="./js/game_classes.js"></script>
+<script src="./js/game_setup.js"></script>
+<script src="./js/index.js"></script>
+</html>
