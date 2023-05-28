@@ -1,15 +1,4 @@
 
-// ?: only give max double jump => Im actully gonna keep it in bc ima call the game Flying Samurai
-// ?: random player names => NAH its a short game no need for names
-// TODO: Controls Screen Before play start
-
-// Event Listeners for player keypresses aka movement
-
-// arrow function basis for function statement (action) vs function expession (produces value) 
-// https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/
-// https://www.w3schools.com/js/js_htmldom_eventlistener.asp
-// When passing parameter values, use an "anonymous function" that calls the specified function with the parameters:
-// element.addEventListener("click", function(){ myFunction(p1, p2); });
 window.addEventListener('keydown', (event) => {
     if(!player1.isDead){
         switch(event.key){
@@ -25,6 +14,7 @@ window.addEventListener('keydown', (event) => {
                 player1.velocity.y = -vertical_vel; // negative to go up
             break;
             case ' ':
+                event.preventDefault();
                 player1.attack();
             break;
         }
